@@ -67,14 +67,14 @@ TODO
 
 TODO
 
-# Further implementation
+# Further implementations
 
 -  insert-data currenly opens a new connection for each iteraction, which makes the process somewhat slower, it makes more sense to create a file with all queries file and then commit everything.
 -  get-tech should not call insert-data from an os perspective.
 -  expand database columns and add more information about domains.
 -  pre-checks in create-table script  
 
-# Contibute
+# Contribute
 
 PRs and issues are welcome.
 
