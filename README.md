@@ -50,7 +50,7 @@ cat domains.txt | httpx --tech-detect -nc > httpx_tech.json
 
 4. Populate the database
 
-After having `techs.txt` file you can run get-tech.py script
+After having `httpx_tech.json` file you can run process_url_tech.py script
 
 ```
 python3 process_url_tech.py
