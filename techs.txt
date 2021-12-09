@@ -1,9 +1,0 @@
-https://refunds-cashbacks.api.tcpay.in [Google Cloud,Nginx,Phusion Passenger]
-https://py.pl
-https://receipts-ng.sumup.com
-https://register.checkout.com
-https://registration.api.tcpay.in [Google Cloud,Nginx,Phusion Passenger]
-https://pushresource.1plus.io [Amazon Cloudfront,Amazon S3,Amazon Web Services]
-https://repo.magento.com [Nginx]
-https://careers.criteo.com [Aurelia,Google Tag Manager,Play,Scala]
-https://pinpayments.com [Amazon ALB,Amazon Web Services,Cloudflare,Google Tag Manager]

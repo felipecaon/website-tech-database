@@ -40,10 +40,10 @@ python3 create-table.py
 3. Get a list of websites with technologies
 
 An example of the only accepted format can be found inside `techs.txt` file.
-To achieve this format you need to probe a list of domains to httpx and the resullt shall be the desired output.
+To achieve this format you need to probe a list of domains to httpx or nuclei using provided tech-detected.yml template and the resullt shall be the desired output.
 
 ```
-cat domains.txt | httpx --tech-detect -nc > techs.txt
+cat domains.txt | httpx --tech-detect -nc > httpx_tech.json
 ```
 
 **The output file name is required to be techs.txt.**
@@ -53,7 +53,7 @@ cat domains.txt | httpx --tech-detect -nc > techs.txt
 After having `techs.txt` file you can run get-tech.py script
 
 ```
-python3 get-tech.py
+python3 process_url_tech.py
 ```
 
 Wait for the script to stop and enjoy your populated dataset.
