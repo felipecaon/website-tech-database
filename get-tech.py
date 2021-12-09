@@ -1,25 +1,14 @@
 import os
+import json
 
-file = open("techs.txt", "r")
-lines = file.readlines()
+with open("techs.json") as file:
+    data = json.load(file)
 
-url = ""
-tech = ""
+    for url, techs in data['technologies'].items():
+        print(f">>> Inserting technologies for {url}")
 
-for line in lines:
-    values = line.split(" ")
-    if len(values) >= 2:
-        url = values[0]
-        print(url)
-        all_techs = values[1:]
-        arr_techs = str(" ".join(all_techs)).split(",")
+        for tech in techs:
+            print(f"Inserting {tech}...")
 
-        for tech in arr_techs:
-            tech_str = tech.replace("[", "").replace("]", "").replace("\n", "")
-            print(url, tech_str)
-            run = 'python3 insert-data.py -u "{}" -t "{}"'.format(url, tech_str)
+            run = f'python3 insert-data.py -u "{url}" -t "{tech}"'
             os.system(run)
-    else:
-        url = values[0]
-        run = 'python3 insert-data.py -u "{}" -t ""'.format(url)
-        os.system(run)
